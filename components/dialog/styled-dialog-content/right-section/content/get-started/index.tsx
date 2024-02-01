@@ -3,11 +3,13 @@ import CodeSection from '../../code';
 function GetStarted() {
   return (
     <div>
-      <h5 className="text-lg text-neutral-600">Javascript Library</h5>
+      <h5 className="text-lg text-neutral-600">Get started</h5>
       <p className="leading-7 text-muted-foreground mt-2">
-        Once upon a time, in a far-off land, there was a very lazy king who
-        spent all day lounging on his throne. One day, his advisors came to him
-        with a problem: the kingdom was running out of money.
+        Plexus js is a javascript library that allows you to send events to your
+        Plexus account. It is the easiest way to get started with Plexus. It is
+        the easiest way to get started with Plexus. It is compatible with all
+        modern browsers and is available as an npm package.
+        Recommanded for web applications.
       </p>
       <CodeSection
         title="Install the package"
