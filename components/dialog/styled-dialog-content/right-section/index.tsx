@@ -16,7 +16,7 @@ function DialogRightSection({
   currentStage: number;
 }) {
   return (
-    <div className="right flex-1 bg-white rounded-tr-2xl rounded-br-2xl rounded-bl-2xl rounded-tl-2xl md:rounded-tl-none shadow-2xl p-5">
+    <div className="right w-full flex-1 bg-white rounded-tr-2xl rounded-br-2xl rounded-bl-2xl rounded-tl-2xl md:rounded-tl-none shadow-2xl p-5">
       {currentStage === 1 && <GetStarted />}
       {currentStage === 2 && <Platform />}
       {currentStage === 3 && <Product />}

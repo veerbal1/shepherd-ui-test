@@ -17,7 +17,7 @@ function CodeSection({
       <h4 className="scroll-m-20 text-sm font-medium tracking-tight">
         {title}
       </h4>
-      <div className="highlighter-section mt-3 p-4 w-full bg-gray-400/30 rounded-lg">
+      <div className="highlighter-section mt-3 p-4 w-full bg-gray-400/30 rounded-lg max-w-sm mx-auto sm:max-w-none">
         <SyntaxHighlighter code={code} />
       </div>
     </div>
