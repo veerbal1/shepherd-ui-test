@@ -5,7 +5,7 @@ import Link from 'next/link';
 function GetStarted({ nextWindow }: { nextWindow?: () => void }) {
   return (
     <div>
-      <h5 className="text-lg text-neutral-600">Get started</h5>
+      <h5 className="text-lg font-semibold text-neutral-800">Get started</h5>
       <p className="leading-7 text-muted-foreground mt-2">
         Plexus js is a javascript library that allows you to send events to your
         Plexus account. It is the easiest way to get started with Plexus. It is

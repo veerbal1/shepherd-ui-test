@@ -5,7 +5,7 @@ import Link from 'next/link';
 function Product({ nextWindow }: { nextWindow?: () => void }) {
   return (
     <div>
-      <h5 className="text-lg text-neutral-600">Product</h5>
+      <h5 className="text-lg font-semibold text-neutral-800">Javascript Library</h5>
       <p className="leading-7 text-muted-foreground mt-2">
         Plexus js is a javascript library that allows you to send events to your
         Plexus account. It is the easiest way to get started with Plexus. It is
@@ -21,7 +21,11 @@ function Product({ nextWindow }: { nextWindow?: () => void }) {
         }}
       />
       <CodeSection
-        link={<Link href="#" className='text-violet-700 font-medium text-sm'>See More &rarr;</Link>}
+        link={
+          <Link href="#" className="text-violet-700 font-medium text-sm">
+            See More &rarr;
+          </Link>
+        }
         title="Configure and Initialize"
         code={{
           language: 'javascript',

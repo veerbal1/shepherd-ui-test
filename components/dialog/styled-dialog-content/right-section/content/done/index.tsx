@@ -4,8 +4,8 @@ import CodeSection from '../../code';
 function Done() {
   return (
     <div>
-      <h5 className="text-lg text-neutral-600">
-        Congratulations you are done!
+      <h5 className="text-lg font-semibold text-neutral-800">
+        Congratulations, You are done!
       </h5>
       <p className="leading-7 text-muted-foreground mt-2">
         Plexus js is a javascript library that allows you to send events to your
