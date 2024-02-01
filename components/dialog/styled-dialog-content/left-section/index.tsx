@@ -9,6 +9,57 @@ function DialogLeftSection({
   progress: number;
   setStates: (state: number) => void;
 }) {
+  const data = [
+    {
+      title: 'Get Started',
+      checked: progress >= 1,
+      current: progress === 1,
+      onClick: () => {
+        setStates(1);
+      },
+    },
+    {
+      title: 'Select your platform',
+      checked: progress >= 2,
+      current: progress === 2,
+      onClick: () => {
+        setStates(2);
+      },
+    },
+    {
+      title: 'Connect your product',
+      checked: progress >= 3,
+      current: progress === 3,
+      onClick: () => {
+        setStates(3);
+      },
+    },
+    {
+      title: 'Listen for events',
+      checked: progress >= 4,
+      current: progress === 4,
+      onClick: () => {
+        setStates(4);
+      },
+    },
+    {
+      title: 'Add Payment Method',
+      checked: progress >= 5,
+      current: progress === 5,
+      onClick: () => {
+        setStates(5);
+      },
+    },
+    {
+      title: 'Done',
+      checked: progress >= 6,
+      current: progress === 6,
+      onClick: () => {
+        setStates(6);
+      },
+    },
+  ];
+
   return (
     <div
       className={cn(
@@ -18,54 +69,14 @@ function DialogLeftSection({
     >
       <ProgressBar progress={progress} />
       <div className="w-full flex flex-col gap-2">
-        <DialogSidebarStrip
-          title="Get Started"
-          checked={progress >= 1}
-          current={progress === 1}
-          onClick={() => {
-            setStates(1);
-          }}
-        />
-        <DialogSidebarStrip
-          title="Select your platform"
-          checked={progress >= 2}
-          current={progress === 2}
-          onClick={() => {
-            setStates(2);
-          }}
-        />
-        <DialogSidebarStrip
-          title="Connect your product"
-          checked={progress >= 3}
-          current={progress === 3}
-          onClick={() => {
-            setStates(3);
-          }}
-        />
-        <DialogSidebarStrip
-          title="Listen for events"
-          checked={progress >= 4}
-          current={progress === 4}
-          onClick={() => {
-            setStates(4);
-          }}
-        />
-        <DialogSidebarStrip
-          title="Add Payment Method"
-          checked={progress >= 5}
-          current={progress === 5}
-          onClick={() => {
-            setStates(5);
-          }}
-        />
-        <DialogSidebarStrip
-          title="Done"
-          checked={progress >= 6}
-          current={progress === 6}
-          onClick={() => {
-            setStates(6);
-          }}
-        />
+        {data.map((item) => (
+          <DialogSidebarStrip
+            title={item.title}
+            checked={item.checked}
+            current={item.current}
+            onClick={item.onClick}
+          />
+        ))}
       </div>
     </div>
   );
