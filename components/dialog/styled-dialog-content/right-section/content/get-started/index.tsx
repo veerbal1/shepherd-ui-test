@@ -1,6 +1,7 @@
+import NextButton from '@/components/common/dialog-next-button';
 import CodeSection from '../../code';
 
-function GetStarted() {
+function GetStarted({ nextWindow }: { nextWindow?: () => void }) {
   return (
     <div>
       <h5 className="text-lg text-neutral-600">Get started</h5>
@@ -8,8 +9,8 @@ function GetStarted() {
         Plexus js is a javascript library that allows you to send events to your
         Plexus account. It is the easiest way to get started with Plexus. It is
         the easiest way to get started with Plexus. It is compatible with all
-        modern browsers and is available as an npm package.
-        Recommanded for web applications.
+        modern browsers and is available as an npm package. Recommanded for web
+        applications.
       </p>
       <CodeSection
         title="Install the package"
@@ -32,6 +33,7 @@ function GetStarted() {
           value: `plexus.capture('my event',{ property: 'value' })`,
         }}
       />
+      <NextButton onClick={nextWindow} />
     </div>
   );
 }

@@ -17,11 +17,11 @@ function DialogRightSection({
 }) {
   return (
     <div className="right w-full flex-1 bg-white rounded-tr-2xl rounded-br-2xl rounded-bl-2xl rounded-tl-2xl md:rounded-tl-none shadow-2xl p-5">
-      {currentStage === 1 && <GetStarted />}
-      {currentStage === 2 && <Platform />}
-      {currentStage === 3 && <Product />}
-      {currentStage === 4 && <Events />}
-      {currentStage === 5 && <Payment />}
+      {currentStage === 1 && <GetStarted nextWindow={incrementState}/>}
+      {currentStage === 2 && <Platform nextWindow={incrementState}/>}
+      {currentStage === 3 && <Product nextWindow={incrementState}/>}
+      {currentStage === 4 && <Events nextWindow={incrementState}/>}
+      {currentStage === 5 && <Payment nextWindow={incrementState}/>}
       {currentStage === 6 && <Done />}
       <div className="absolute bottom-0 hidden">
         <Button onClick={incrementState}> Increment</Button>

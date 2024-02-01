@@ -1,6 +1,7 @@
+import NextButton from '@/components/common/dialog-next-button';
 import CodeSection from '../../code';
 
-function Events() {
+function Events({ nextWindow }: { nextWindow?: () => void }) {
   return (
     <div>
       <h5 className="text-lg text-neutral-600">Events</h5>
@@ -32,6 +33,7 @@ function Events() {
           value: `plexus.capture('my event',{ property: 'value' })`,
         }}
       />
+      <NextButton onClick={nextWindow} />
     </div>
   );
 }
