@@ -15,7 +15,7 @@ function UIDialog() {
   if (!mounted) return null;
 
   return (
-    <div className="absolute bottom-0 right-0 m-16">
+    <div className="absolute bottom-0 left-[50%] translate-x-[-50%] mb-10">
       <Dialog>
         <DialogTrigger>
           <Button>Open Dialog</Button>
