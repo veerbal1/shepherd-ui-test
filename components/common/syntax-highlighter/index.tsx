@@ -19,7 +19,10 @@ function SyntaxHighlighter({
       <pre className="w-full rounded-lg text-sm language-javascript relative">
         <button
           className="absolute right-0 top-0 mr-4 mt-4 hover:scale-110 transition-all"
-          onClick={() => toast('Text copied')}
+          onClick={() => {
+            navigator.clipboard.writeText(code.value);
+            toast('Copied to clipboard');
+          }}
         >
           <ClipboardCopyIcon className="text-white" />
         </button>
