@@ -29,14 +29,14 @@ function Platform({ nextWindow }: { nextWindow?: () => void }) {
         title="Configure and Initialize"
         code={{
           language: 'javascript',
-          value: `import plexus from 'plexus-js'\n\nplexus.init('phc_324dseqioqeuqwion324nnjke133eq33$3131232')`,
+          value: `import plexus from 'plexus-js';\n\nplexus.init('phc_324dseqioqeuqwion324nnjke133eq33$3131232');`,
         }}
       />
       <CodeSection
         title="Send your first event"
         code={{
           language: 'javascript',
-          value: `plexus.capture('my event',{ property: 'value' })`,
+          value: `plexus.capture('my event', { property: 'value' });`,
         }}
       />
       <NextButton onClick={nextWindow} />
