@@ -14,9 +14,12 @@ function CodeSection({
 }) {
   return (
     <div className="my-6">
-      <h4 className="scroll-m-20 text-sm font-medium tracking-tight">
-        {title}
-      </h4>
+      <div className="flex justify-between">
+        <h4 className="scroll-m-20 text-sm font-medium tracking-tight">
+          {title}
+        </h4>
+        {link}
+      </div>
       <div className="highlighter-section mt-3 p-4 w-full bg-gray-400/30 rounded-lg max-w-sm mx-auto sm:max-w-none">
         <SyntaxHighlighter code={code} />
       </div>

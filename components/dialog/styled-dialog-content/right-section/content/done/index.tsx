@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import CodeSection from '../../code';
 
 function Done() {
@@ -21,6 +22,11 @@ function Done() {
         }}
       />
       <CodeSection
+        link={
+          <Link href="#" className="text-violet-700 font-medium text-sm">
+            See More &rarr;
+          </Link>
+        }
         title="Configure and Initialize"
         code={{
           language: 'javascript',

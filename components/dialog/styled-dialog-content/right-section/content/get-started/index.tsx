@@ -1,5 +1,6 @@
 import NextButton from '@/components/common/dialog-next-button';
 import CodeSection from '../../code';
+import Link from 'next/link';
 
 function GetStarted({ nextWindow }: { nextWindow?: () => void }) {
   return (
@@ -20,6 +21,11 @@ function GetStarted({ nextWindow }: { nextWindow?: () => void }) {
         }}
       />
       <CodeSection
+        link={
+          <Link href="#" className="text-violet-700 font-medium text-sm">
+            See More &rarr;
+          </Link>
+        }
         title="Configure and Initialize"
         code={{
           language: 'javascript',
