@@ -1,0 +1,22 @@
+.model .left {
+  position: relative;
+}
+
+.model .left::after {
+  --border-radius: 1rem;
+  border: 10px solid white;
+  border-left: none;
+  border-bottom: none;
+  content: '';
+  position: absolute;
+  width: var(--border-radius);
+  height: var(--border-radius);
+  right: 0rem;
+  background: transparent;
+  width: 2em;
+  height: 2em;
+  z-index: 10;
+  border-radius: 0 100vw 0 0;
+  bottom: -22px;
+  right: -10px;
+}
