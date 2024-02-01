@@ -15,6 +15,7 @@ function DialogLeftSection({
         <DialogSidebarStrip
           title="Get Started"
           checked={progress >= 1}
+          current={progress === 1}
           onClick={() => {
             setStates(1);
           }}
@@ -22,6 +23,7 @@ function DialogLeftSection({
         <DialogSidebarStrip
           title="Select your platform"
           checked={progress >= 2}
+          current={progress === 2}
           onClick={() => {
             setStates(2);
           }}
@@ -29,6 +31,7 @@ function DialogLeftSection({
         <DialogSidebarStrip
           title="Connect your product"
           checked={progress >= 3}
+          current={progress === 3}
           onClick={() => {
             setStates(3);
           }}
@@ -36,6 +39,7 @@ function DialogLeftSection({
         <DialogSidebarStrip
           title="Listen for events"
           checked={progress >= 4}
+          current={progress === 4}
           onClick={() => {
             setStates(4);
           }}
@@ -43,6 +47,7 @@ function DialogLeftSection({
         <DialogSidebarStrip
           title="Add Payment Method"
           checked={progress >= 5}
+          current={progress === 5}
           onClick={() => {
             setStates(5);
           }}
@@ -50,6 +55,7 @@ function DialogLeftSection({
         <DialogSidebarStrip
           title="Done"
           checked={progress >= 6}
+          current={progress === 6}
           onClick={() => {
             setStates(6);
           }}
