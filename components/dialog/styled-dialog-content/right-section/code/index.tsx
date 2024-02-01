@@ -20,7 +20,7 @@ function CodeSection({
         </h4>
         {link}
       </div>
-      <div className="highlighter-section mt-3 p-4 w-full bg-gray-400/30 rounded-lg max-w-sm mx-auto sm:max-w-none">
+      <div className="highlighter-section mt-3 p-4 w-full bg-gray-400/30 rounded-lg max-w-[18rem] mx-auto sm:max-w-none">
         <SyntaxHighlighter code={code} />
       </div>
     </div>
