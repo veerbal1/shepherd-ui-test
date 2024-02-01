@@ -9,7 +9,7 @@ function UIDialog() {
         <DialogTrigger>
           <Button>Open Dialog</Button>
         </DialogTrigger>
-        <DialogContent className="bg-transparent border-none max-w-5xl overflow-scroll max-h-[90vh]">
+        <DialogContent className="bg-transparent border-none max-w-5xl overflow-scroll max-h-[90vh] no-scrollbar">
           <StyledDialogContent />
         </DialogContent>
       </Dialog>
