@@ -1,5 +1,6 @@
 import DialogSidebarStrip from '@/components/common/dialog-sidebar-strip';
 import { cn } from '@/lib/utils';
+import styles from './style.module.css';
 
 function DialogLeftSection({
   progress,
@@ -9,7 +10,12 @@ function DialogLeftSection({
   setStates: (state: number) => void;
 }) {
   return (
-    <div className="left w-64 bg-white rounded-tl-2xl rounded-bl-2xl hidden md:flex p-5 items-center gap-3 self-start">
+    <div
+      className={cn(
+        'left w-64 bg-white rounded-tl-2xl rounded-bl-2xl hidden md:flex p-5 items-center gap-3 self-start',
+        styles.box
+      )}
+    >
       <ProgressBar progress={progress} />
       <div className="w-full flex flex-col gap-2">
         <DialogSidebarStrip
