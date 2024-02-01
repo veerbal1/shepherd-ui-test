@@ -9,10 +9,6 @@ export default function Home() {
       </div>
 
       <UIDialog />
-
-      {/* <div className="hidden model-wrapper w-full h-full backdrop-blur-sm absolute top-0 left-0 z-10 flex justify-center items-center bg-black/15">
-        
-      </div> */}
     </div>
   );
 }
