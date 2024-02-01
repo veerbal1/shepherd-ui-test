@@ -1,17 +1,59 @@
 import DialogSidebarStrip from '@/components/common/dialog-sidebar-strip';
 import { cn } from '@/lib/utils';
 
-function DialogLeftSection({ progress }: { progress: number }) {
+function DialogLeftSection({
+  progress,
+  setStates,
+}: {
+  progress: number;
+  setStates: (state: number) => void;
+}) {
   return (
     <div className="left w-64 bg-white rounded-tl-2xl rounded-bl-2xl hidden md:flex p-5 items-center gap-3 self-start">
       <ProgressBar progress={progress} />
       <div className="w-full flex flex-col gap-2">
-        <DialogSidebarStrip title="Get Started" checked={true} />
-        <DialogSidebarStrip title="Select your platform" checked={true} />
-        <DialogSidebarStrip title="Connect your product" current={true} />
-        <DialogSidebarStrip title="Listen for events" />
-        <DialogSidebarStrip title="Add Payment Method" />
-        <DialogSidebarStrip title="Done" />
+        <DialogSidebarStrip
+          title="Get Started"
+          checked={progress >= 1}
+          onClick={() => {
+            setStates(1);
+          }}
+        />
+        <DialogSidebarStrip
+          title="Select your platform"
+          checked={progress >= 2}
+          onClick={() => {
+            setStates(2);
+          }}
+        />
+        <DialogSidebarStrip
+          title="Connect your product"
+          checked={progress >= 3}
+          onClick={() => {
+            setStates(3);
+          }}
+        />
+        <DialogSidebarStrip
+          title="Listen for events"
+          checked={progress >= 4}
+          onClick={() => {
+            setStates(4);
+          }}
+        />
+        <DialogSidebarStrip
+          title="Add Payment Method"
+          checked={progress >= 5}
+          onClick={() => {
+            setStates(5);
+          }}
+        />
+        <DialogSidebarStrip
+          title="Done"
+          checked={progress >= 6}
+          onClick={() => {
+            setStates(6);
+          }}
+        />
       </div>
     </div>
   );
@@ -22,7 +64,7 @@ const ProgressBar = ({ progress }: { progress: number }) => {
     return (
       <div
         className={cn(
-          'circle w-2 h-2 rounded-full border z-10 bg-white',
+          'circle w-2 h-2 rounded-full border z-10 bg-white transition-colors',
           checked && 'bg-violet-700'
         )}
       ></div>
@@ -46,12 +88,12 @@ const ProgressBar = ({ progress }: { progress: number }) => {
 
   return (
     <div className="w-4 self-stretch my-3 flex flex-col justify-between items-center relative">
-      <Circle checked />
-      <Circle checked />
-      <Circle />
-      <Circle />
-      <Circle />
-      <Circle />
+      <Circle checked={progress >= 1} />
+      <Circle checked={progress >= 2} />
+      <Circle checked={progress >= 3} />
+      <Circle checked={progress >= 4} />
+      <Circle checked={progress >= 5} />
+      <Circle checked={progress >= 6} />
       <div className="dotted-line h-full border absolute z-0 border-dashed border-l-0">
         <div
           className={cn(

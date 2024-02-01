@@ -20,9 +20,14 @@ function StyledDialogContent() {
     });
   };
 
+  const setStates = (state: number) => {
+    if (state < 1 || state > 6) return;
+    setCurrentStage(state);
+  };
+
   return (
     <div className="model flex w-full">
-      <DialogLeftSection progress={currentStage} />
+      <DialogLeftSection progress={currentStage} setStates={setStates} />
       <DialogRightSection
         incrementState={incrementState}
         decrementState={decrementState}
