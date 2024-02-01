@@ -26,7 +26,7 @@ function StyledDialogContent() {
   };
 
   return (
-    <div className="model flex w-full">
+    <div className="model flex w-full max-w-4xl mx-auto">
       <DialogLeftSection progress={currentStage} setStates={setStates} />
       <DialogRightSection
         incrementState={incrementState}
