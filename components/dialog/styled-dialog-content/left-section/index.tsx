@@ -71,6 +71,7 @@ function DialogLeftSection({
       <div className="w-full flex flex-col gap-2">
         {data.map((item) => (
           <DialogSidebarStrip
+            key={item.title}
             title={item.title}
             checked={item.checked}
             current={item.current}
